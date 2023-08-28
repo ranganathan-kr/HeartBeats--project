@@ -1,0 +1,28 @@
+<div class="login-container mt-5 mb-5">
+    <h2><u>Login</u></h2>
+    <form [formGroup]="loginform" (ngSubmit)="submitForm()">
+      <div class="form-group">
+        <label for="phnnumber">Ph No</label>
+        <input type="text" class="form-control" id="phnnumber" formControlName="phnnumber" >
+      </div>
+      <div *ngIf="!phnnumber?.valid && (phnnumber?.dirty ||phnnumber?.touched)" class ="Validation">
+        <div [hidden]="!phnnumber?.errors?.['required']">
+          phnnumber is required!
+        </div>
+        </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" formControlName="password">
+      </div>
+      <div *ngIf="!password?.valid && (password?.dirty || password?.touched)" class ="Validation">
+         <div [hidden] = "!password?.errors?.['required']">
+          password is required!
+         </div>
+         
+      </div>
+      <button type="submit" class="btn btn-danger" (click)="submitForm()" [disabled] ="!loginform.valid">Login</button><br>
+      <p>Not a Donor?<a href="/donor-count">Join us</a></p>
+
+    </form>
+  </div>
+  

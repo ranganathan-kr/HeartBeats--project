@@ -1,0 +1,90 @@
+<div class="container md-5 mt-4">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <img class="card-img-top" src="assets/images/india-blood.jpeg" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">India Suffers!!</h5>
+          <p *ngIf="showContent1" class="card-text">
+            According to the World Health Organization (WHO), India suffers from an annual deficit of 2 million blood units, as only 1% of the Indian population donates blood each year.
+          </p>
+          <a class="btn btn-primary" (click)="toggleContent1()">
+            {{ showContent1 ? 'Got-it' : 'Im Curious' }}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="assets/images/time.jpeg" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">Blood-Donation time range?</h5>
+          <p *ngIf="showContent2" class="card-text">
+            The minimum time between whole blood donations ranges from 56 days (8 weeks) to 16 weeks. Platelet donations can be made as frequently as every eight day.
+          </p>
+          <a class="btn btn-primary" (click)="toggleContent2()">
+            {{ showContent2 ? 'Got-it' : 'Im Curious'  }}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="assets/images/save.jpeg" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">Save you by Donation!</h5>
+          <p *ngIf="showContent3" class="card-text">
+            Donating blood can help reveal potential health problems in the donor as before drawing blood undergoing a health screening is mandatory. This can effectively detect problems that could indicate an underlying medical condition or risk factors for certain diseases.
+          </p>
+          <a class="btn btn-primary" (click)="toggleContent3()">
+            {{ showContent3 ? 'Got-it' : 'Im Curious'  }}
+          </a>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="assets/images/savethem.jpeg" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">How can you save them?</h5>
+          <p *ngIf="showContent4" class="card-text">
+            A person can donate one unit of blood in one hour, which can be separated into 4 individual components that can help save multiple lives.
+          </p>
+          <a class="btn btn-primary" (click)="toggleContent4()">
+            {{ showContent4 ? 'Got-it' : 'Im Curious'  }}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="assets/images/plattelet.jpeg" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">what happens after?</h5>
+          <p *ngIf="showContent5" class="card-text">
+            After donating blood, you replace the fluid in hours and the red blood cells within four weeks. It takes eight weeks to restore the iron lost after donating.
+          </p>
+          <a class="btn btn-primary" (click)="toggleContent5()">
+            {{ showContent5 ? 'Got-it' : 'Im Curious'  }}
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="assets/images/whocan.jpeg" alt="Card Image">
+        <div class="card-body">
+          <h5 class="card-title">Who can Donate?</h5>
+          <p *ngIf="showContent6" class="card-text">
+            Healthy adults who are at least 17 years old, and at least 110 pounds may donate about a pint of blood - the most common form of donation - every 56 days, or every two months. Females receive 53 percent of blood transfusions; males receive 47 percent.
+          </p>
+          <a class="btn btn-primary" (click)="toggleContent6()">
+            {{ showContent6 ? 'Got-it' : 'Im Curious'  }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

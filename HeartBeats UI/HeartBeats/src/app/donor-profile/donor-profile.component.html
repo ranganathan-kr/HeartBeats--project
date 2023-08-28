@@ -1,0 +1,43 @@
+<div class="Profile">
+  <div class="row">
+    <div class="col-6">
+      <div class="container">
+<!-- <div *ngIf="donor"> -->
+    <h2><u>Donor Profile</u></h2>
+    <p>Name: </p>
+    <p>Number: </p>
+    <p>DOB : </p>
+    <p>BoodGroup : </p>
+    <p>State : </p>
+    <p>City : </p>  
+    <p>Email : </p>
+
+    <p>Email: </p>
+  </div></div>
+  <div class="col-6">
+    <!-- Update Profile Form -->
+    <div class="container mt-3">
+      <h3><u>Update Profile</u></h3>
+      <form (ngSubmit)="updateProfile(donor.id)">
+        <label for="updatedName">Update Name  :   </label>
+        <input type="text" id="updatedName" class="formControl mt-2" [(ngModel)]="updatedDonor.name" name="updatedName"><br>
+        
+        <label for="updatedEmail">Update Email  :   </label>
+        <input type="email" id="updatedEmail" class="formControl mt-4" [(ngModel)]="updatedDonor.email" name="updatedEmail"><br>
+        
+        <label for="updatedEmail">Update Number  :   </label>
+        <input type="email" id="updatedEmail" class="formControl mt-4" [(ngModel)]="updatedDonor.email" name="updatedEmail"><br>
+
+        <label for="updatedEmail">Update Email: </label>
+        <input type="email" id="updatedEmail" class="formControl mt-4" [(ngModel)]="updatedDonor.email" name="updatedEmail"><br>
+
+        <button type="submit" class="btn btn-warning mt-4">Update</button>
+      </form>
+    </div>
+  </div>
+    <!-- Delete Profile Button -->
+    <div>
+      <button (click)="deleteProfile(donor.id)" class="btn btn-danger mt-4">Delete Profile</button>
+    </div>
+  <!-- </div> -->
+</div></div>

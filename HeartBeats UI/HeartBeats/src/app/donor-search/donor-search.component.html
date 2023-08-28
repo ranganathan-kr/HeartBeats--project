@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <select class="form-control" [(ngModel)]="state">
+          <!-- State dropdown options -->
+          <option value="">Select State</option>
+          <option *ngFor="let stateOption of states" [value]="stateOption">{{ stateOption }}</option>
+          <!-- Add more options here -->
+        </select>
+      </div>
+      <div class="col-md-3">
+        <select class="form-control"  [(ngModel)]="city">
+          <!-- City dropdown options -->
+          <option value="">Select City</option>
+          <option *ngFor="let cityOption of cities" [value]="cityOption">{{ cityOption }}</option>
+          <!-- Add more options here -->
+        </select>
+      </div>
+      <div class="col-md-3">
+        <select class="form-control" [(ngModel)]="blood">
+          <!-- Blood group dropdown options -->
+          <option value="">Select Blood Group</option>
+          <option *ngFor="let bloodTypeOption of blood" [value]="bloodTypeOption">{{ bloodTypeOption }}</option>
+          <!-- Add more options here -->
+        </select>
+      </div>
+      <div class="col-md-3">
+        <button class="btn btn-primary" (click)="searchDonors()">Search</button>
+      </div>
+    </div>
+  
+    <div class="row mt-4">
+      <div class="col-md-12">
+        <table class="table table-danger">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>City</th>
+              <th>State</th>
+              <th>Blood Group</th>
+              <th>Contact</th>
+              <th>Request</th>
+              <th>Report</th>
+            </tr>
+          </thead>
+          <div *ngIf="donors.length > 0">
+          <tbody *ngFor="let donor of donors">
+            <!-- Table rows -->
+            <tr>
+              <td>{{ donor.name }}</td>
+             <td> {{ donor.city }} </td>
+             <td>{{ donor.state }}</td>
+              <!-- <td>{{ donor.blood}}</td>
+              <td>{{donor.number}}</td> -->
+              <td><button class="btn btn-primary" >Request</button></td>
+              <td><button class="btn btn-danger" >Report</button></td>
+
+            </tr>
+            <!-- Add more rows here -->
+          </tbody>
+        </div>
+        </table>
+      </div>
+    </div>
+  </div>
+  
