@@ -1,0 +1,35 @@
+<div class="profile-container">
+  <h2 class="text-center">Donor Profile</h2>
+  <div class="container">
+  <form [formGroup]="updateForm" class="form-group mt-3" (ngSubmit)="updateProfile()">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name">
+    </div>
+    
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email">
+    </div>
+    <div>
+      <label for="state">State:</label>
+      <input type="text" id="state" formControlName="state">
+    </div>
+    <div>
+      <label for="city">City:</label>
+      <input type="text" id="city" formControlName="city">
+    </div>
+   
+    <!-- Include password input if needed -->
+   
+    <!-- <button type="submit" class="btn btn-primary">Update Profile</button> -->
+  </form>
+
+  <button class="btn btn-danger" (click)="deleteProfile()">Delete Profile</button>
+</div>
+<!-- <div *ngIf="donor && donor.bloodDonationRequested">
+  <p>Blood donation requested</p>
+  <button class="btn btn-primary" (click)="cancelRequest()">Cancel Request</button>
+</div> -->
+<app-card></app-card>
+<app-footer></app-footer>

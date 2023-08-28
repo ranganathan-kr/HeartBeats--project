@@ -1,0 +1,107 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-3">
+      <select class="form-control" [(ngModel)]="state">
+        <!-- State dropdown options -->
+        <option value="">Select State</option>
+        <option *ngFor="let stateOption of states" [value]="stateOption">{{ stateOption }}</option>
+        <!-- Add more options here -->
+      </select>
+    </div>
+    <div class="col-md-3">
+      <select class="form-control" [(ngModel)]="city">
+        <!-- City dropdown options -->
+        <option value="">Select City</option>
+        <option *ngFor="let cityOption of cities" [value]="cityOption">{{ cityOption }}</option>
+        <!-- Add more options here -->
+      </select>
+    </div>
+    <div class="col-md-3">
+      <select class="form-control" [(ngModel)]="bloodType">
+        <!-- Blood group dropdown options -->
+        <option value="">Select Blood Group</option>
+        <option *ngFor="let bloodTypeOption of bloodTypes" [value]="bloodTypeOption">{{ bloodTypeOption }}</option>
+        <!-- Add more options here -->
+      </select>
+    </div>
+    <div class="col-md-3">
+      <button class="btn btn-primary" (click)="searchDonors()">Search</button>
+    </div>
+  </div>
+  <div *ngIf="donors.length > 0">
+
+  <div class="row mt-4">
+    <div class="col-md-12">
+      <table class="table table-danger">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Blood Group</th>
+            <th>Contact</th>
+          
+            <th>Report</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let donor of donors">
+          <!-- Table rows -->
+          <tr>
+            <td>{{ donor.name }}</td>
+            <td> {{ donor.city }} </td>
+            <td>{{ donor.state }}</td>
+            <td>{{ donor.blood}}</td>
+           <td>{{ donor.number }}</td> 
+           <!-- <button (click)="requestBlood(donor)" class="btn btn-primary">Request Blood</button>
+           <p *ngIf="requestedDonorId === donor.id" class="requested-message">
+             Blood requested from this donor!
+           </p> -->
+           
+            <td><button (click)="reportDonor(donor)" class="btn btn-danger">Report</button></td>
+
+          </tr>
+          <!-- Add more rows here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- <div>
+  <label for="city">City:</label>
+  <select [(ngModel)]="city" id="city">
+    <option value="">Select City</option>
+    <option *ngFor="let cityOption of cities" [value]="cityOption">{{ cityOption }}</option>
+  </select>
+
+  <label for="state">State:</label>
+  <select [(ngModel)]="state" id="state">
+    <option value="">Select State</option>
+    <option *ngFor="let stateOption of states" [value]="stateOption">{{ stateOption }}</option>
+  </select>
+
+  <label for="bloodType">Blood Type:</label>
+  <select [(ngModel)]="bloodType" id="bloodType">
+    <option value="">Select Blood Type</option>
+    <option *ngFor="let bloodTypeOption of bloodTypes" [value]="bloodTypeOption">{{ bloodTypeOption }}</option>
+  </select>
+  <button (click)="searchDonors()">Search</button>
+</div>
+
+<div *ngIf="donors.length > 0">
+  <ul>
+    <li *ngFor="let donor of donors">
+      {{ donor.name }} - {{ donor.bloodType }} - {{ donor.city }}, {{ donor.state }}
+
+      <button (click)="requestBlood(donor)" class="btn btn-primary">Request Blood</button>
+      <p *ngIf="requestedDonorId === donor.id" class="requested-message">
+        Blood requested from this donor!
+      </p>
+    <button (click)="reportDonor(donor)" class="btn btn-danger">Report</button>
+
+    </li>
+  </ul>
+  
+</div> -->
+<app-card></app-card>
+<app-footer [ngClass]="{'fixed bottom':true}"></app-footer>

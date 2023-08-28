@@ -1,0 +1,38 @@
+/* Style for the login container */
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the validation messages */
+.validation {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Style for the submit button */
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style for the footer */
+.fixed.bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ccc;
+  padding: 10px 0;
+  text-align: center;
+}

@@ -1,0 +1,10 @@
+.form-group,h2{
+    color:white;
+    margin: auto;
+}
+container{
+    margin: auto;
+}
+input,btn{
+    border-radius: 15px 15px 15px 15px;
+}

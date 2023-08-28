@@ -1,0 +1,40 @@
+/* .header-image {
+    text-align: center; /* Center the image horizontally }*/
+  
+
+  /* .header-image img {
+    max-width: 0%;
+    height: 0px; } */
+ /* component-name.component.css */
+/* .custom-header {
+  height: 1px; 
+} */
+
+/* .card-img-top{
+  height: 40px;
+  width: auto;
+  text-align:left;
+} */
+
+header {
+  background-color: white;
+  /* color: white; */
+  /* padding: 10px 0; */
+}
+
+
+
+.logo img {
+  width: 400px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+}
+
+
+

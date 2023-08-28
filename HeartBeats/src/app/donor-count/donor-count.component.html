@@ -1,0 +1,71 @@
+<form [formGroup]="donorForm" (ngSubmit)="submitForm()">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" formControlName="name">
+    <div *ngIf="name!.invalid && (name!.dirty || name!.touched)" class="validation">
+      <div *ngIf="name!.errors">Name is required.</div>
+    </div>
+  </div>
+
+  <div>
+    <label for="bloodType">Blood Type:</label>
+    <input type="text" id="bloodType" formControlName="bloodType">
+    <div *ngIf="bloodType!.invalid && (bloodType!.dirty || bloodType!.touched)" class="validation">
+      <div *ngIf="bloodType!.errors">Blood Type is required.</div>
+    </div>
+  </div>
+
+  <div>
+    <label for="number">Number:</label>
+    <input type="text" id="number" formControlName="number">
+    <div *ngIf="number!.invalid && (number!.dirty || number!.touched)" class="validation">
+      <div *ngIf="number!.errors">Number is required.</div>
+      <div *ngIf="number!.errors">Number must be exactly 10 digits.</div>
+    </div>
+  </div>
+
+  <div>
+    <label for="email">Email:</label>
+    <input type="text" id="email" formControlName="email">
+    <div *ngIf="email!.invalid && (email!.dirty || email!.touched)"class="validation">
+      <div *ngIf="email!.errors">Email is required.</div>
+      <div *ngIf="email!.errors">Invalid email format.</div>
+    </div>
+  </div>
+
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password">
+    <div *ngIf="password!.invalid && (password!.dirty || password!.touched)"class="validation">
+      <div *ngIf="password!.errors">Password is required.</div>
+      <div *ngIf="password!.errors">Password must be at least 8 characters long.</div>
+    </div>
+  </div>
+
+  <div>
+    <label for="state">State:</label>
+    <input type="text" id="state" formControlName="state">
+    <div *ngIf="state!.invalid && (state!.dirty || state!.touched)" class="validation">
+      <div *ngIf="state!.errors">State is required.</div>
+    </div>
+  </div>
+  
+  <div>
+    <label for="city">City:</label>
+    <input type="text" id="city" formControlName="city">
+    <div *ngIf="city!.invalid && (city!.dirty || city!.touched)"class="validation">
+      <div *ngIf="city!.errors">City is required.</div>
+    </div>
+    
+  </div>
+  
+  <button type="submit" [disabled]="donorForm.invalid">Submit</button>
+  
+  <!-- Validation messages for state and city -->
+  
+  
+ 
+  <!-- Other form fields here -->
+
+  
+</form>
